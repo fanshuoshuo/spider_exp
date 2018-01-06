@@ -14,8 +14,8 @@ BOT_NAME = 'gov'
 SPIDER_MODULES = ['gov.spiders']
 NEWSPIDER_MODULE = 'gov.spiders'
 
-FEED_EXPORT_ENCODING = 'utf-8' 
-USER_AGENT = 'Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0' 
+FEED_EXPORT_ENCODING = 'utf-8'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -67,9 +67,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'gov.pipelines.GovPipeline': 300,
-#}
+
+ITEM_PIPELINES = {
+    'gov.pipelines.GovPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
